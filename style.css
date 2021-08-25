@@ -44,3 +44,32 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+#tech-container1 {
+  display: flex;
+}
+
+#tech-container1 label {
+  margin: 5px;;
+}
+
+#tech-container2   {
+  display: flex;
+}
+
+#tech-container2 label {
+  margin: 5px;;
+}
+
+#rate-container {
+  display: flex;
+  margin: 15px 0px;
+}
+
+#rating-container {
+  display: flex;
+}
+
+#label-rate {
+  margin: 0;
+}
