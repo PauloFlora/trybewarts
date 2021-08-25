@@ -2,7 +2,8 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const submitFormBtn = document.getElementById('submit');
 
-function checkUser() {
+function checkUser(event) {
+  event.preventDefault();
   if (email.value === 'tryber@teste.com' && password.value === '123456') {
     window.alert('Olá, Tryber!');
   } else {
