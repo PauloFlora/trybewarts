@@ -31,3 +31,11 @@ main {
 #trybewarts-forms-logo {
   height: 500px;
 }
+
+#name-container {
+  display: flex;
+
+}
+#house-container {
+  display: flex;
+}
