@@ -34,8 +34,13 @@ main {
 
 #name-container {
   display: flex;
-
 }
+
 #house-container {
   display: flex;
+}
+
+#label-family {
+  display: flex;
+  flex-direction: column;
 }
