@@ -1,6 +1,8 @@
 const email = document.getElementById('email');
 const password = document.getElementById('password');
-const submitFormBtn = document.getElementById('submit');
+const submitHeaderBtn = document.getElementById('submit');
+const submitFormBtn = document.getElementById('submit-btn');
+const checkAgreement = document.getElementById('agreement');
 
 function checkUser(event) {
   event.preventDefault();
@@ -11,4 +13,14 @@ function checkUser(event) {
   }
 }
 
-submitFormBtn.addEventListener('click', checkUser);
+submitHeaderBtn.addEventListener('click', checkUser);
+
+submitFormBtn.disabled = true;
+
+function submitForm() {
+  if (checkAgreement.checked === true) {
+    submitFormBtn.disabled = false;
+  }
+}
+
+checkAgreement.addEventListener('click', submitForm);
