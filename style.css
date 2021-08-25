@@ -50,20 +50,21 @@ main {
 }
 
 #tech-container1 label {
-  margin: 5px;;
+  margin: 5px;
 }
 
-#tech-container2   {
+#tech-container2 {
   display: flex;
 }
 
 #tech-container2 label {
-  margin: 5px;;
+  margin: 5px;
 }
 
 #rate-container {
   display: flex;
-  margin: 15px 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 #rating-container {
