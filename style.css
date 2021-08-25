@@ -25,6 +25,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 675px;
+  justify-content: center;
 }
 
 #trybewarts-forms-logo {
