@@ -3,6 +3,9 @@ const password = document.getElementById('password');
 const submitHeaderBtn = document.getElementById('submit');
 const submitFormBtn = document.getElementById('submit-btn');
 const checkAgreement = document.getElementById('agreement');
+const textCounter = document.getElementById('counter');
+let textArea = document.getElementById('textarea');
+parseInt(textCounter.innerText)
 
 function checkUser(event) {
   event.preventDefault();
@@ -23,3 +26,9 @@ function submitForm() {
 }
 
 checkAgreement.addEventListener('click', submitForm);
+
+textArea.addEventListener('keyup', function() {
+  textCounter.innerText = 500 - textArea.value.length;
+})
+
+
