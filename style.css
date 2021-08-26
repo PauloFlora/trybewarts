@@ -86,6 +86,6 @@ main {
 
 #textarea-container #counter {
   position: absolute;
-  transform:translateY(-100%);
+  transform: translateY(-100%);
   margin-left: 26%;
 }
