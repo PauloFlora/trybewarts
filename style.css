@@ -83,3 +83,9 @@ main {
 #agreement-container {
   display: flex;
 }
+
+#textarea-container #counter {
+  position: absolute;
+  transform:translateY(-100%);
+  margin-left: 26%;
+}
