@@ -35,15 +35,18 @@ function updateCounter() {
 textArea.addEventListener('input', updateCounter);
 
 function getSubjects() {
-  let subjectsText = 'Materias: ';
-  const subjects = document.querySelectorAll('input[class="subject"]:checked');
-  for (let i = 0; i < subjects.length; i += 1) {
-    subjectsText += `${subjects[i].value} `;
+  let subjectsText = 'Matérias: ';
+  const subjects = [];
+  const subjectsInput = document.querySelectorAll('input[class="subject"]:checked');
+  for (let i = 0; i < subjectsInput.length; i += 1) {
+    subjects.push(subjectsInput[i].value);
   }
+  subjectsText += subjects.join(', ');
   return subjectsText;
 }
 
-function getFormData() {
+function getFormData(e) {
+  e.preventDefault();
   const name = document.getElementById('input-name').value;
   const lastName = document.getElementById('input-lastname').value;
   const fullName = `Nome: ${name} ${lastName}`;
@@ -53,7 +56,6 @@ function getFormData() {
   const subjects = getSubjects();
   const evaluation = document.querySelector('input[name="rate"]:checked').value;
   const observations = document.querySelector('textarea').value;
-
   form.innerHTML = '';
   form.innerHTML = `${fullName}<br>
     Email: ${email}<br>
