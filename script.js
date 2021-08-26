@@ -16,7 +16,6 @@ function checkUser(event) {
 submitHeaderBtn.addEventListener('click', checkUser);
 
 submitFormBtn.disabled = true;
-
 function submitForm() {
   if (checkAgreement.checked === true) {
     submitFormBtn.disabled = false;
