@@ -1,91 +1,16 @@
-.header {
-  display: flex;
+header {
   background-color: rgb(50, 167, 145);
-  justify-content: space-between;
-  align-items: center;
-}
-
-.trybewarts-login {
-  display: flex;
-}
-
-h1 {
   color: white;
 }
 
-img {
-  height: 100px;
+header > button {
+  color: black;
 }
 
-main {
-  display: flex;
+.trybewarts-header-logo {
+  width: 80px;
 }
 
-#evaluation-form {
-  display: flex;
-  flex-direction: column;
-  width: 675px;
-  justify-content: center;
-}
-
-#trybewarts-forms-logo {
-  height: 500px;
-}
-
-#name-container {
-  display: flex;
-}
-
-#house-container {
-  display: flex;
-}
-
-#label-family {
-  display: flex;
-  flex-direction: column;
-}
-
-#tech-container1 {
-  display: flex;
-}
-
-#tech-container1 label {
-  margin: 5px;
-}
-
-#tech-container2 {
-  display: flex;
-}
-
-#tech-container2 label {
-  margin: 5px;
-}
-
-#rate-container {
-  display: flex;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-#rating-container {
-  display: flex;
-}
-
-#label-rate {
-  margin: 0;
-}
-
-#textarea-container {
-  display: flex;
-  flex-direction: column;
-}
-
-#agreement-container {
-  display: flex;
-}
-
-#textarea-container #counter {
-  position: absolute;
-  transform: translateY(-100%);
-  margin-left: 26%;
+.trybewarts-logo {
+  width: 500px;
 }

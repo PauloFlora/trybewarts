@@ -3,10 +3,7 @@ const password = document.getElementById('password');
 const submitHeaderBtn = document.getElementById('submit');
 const submitFormBtn = document.getElementById('submit-btn');
 const checkAgreement = document.getElementById('agreement');
-const textCounter = document.getElementById('counter');
-const textArea = document.getElementById('textarea');
 const form = document.getElementById('evaluation-form');
-// const inputs = document.getElementsByClassName('subject');
 
 function checkUser(event) {
   event.preventDefault();
@@ -23,23 +20,22 @@ submitFormBtn.disabled = true;
 function submitForm() {
   if (checkAgreement.checked === true) {
     submitFormBtn.disabled = false;
+  } else {
+    submitFormBtn.disabled = true;
   }
 }
 
 checkAgreement.addEventListener('click', submitForm);
 
-function updateCounter() {
-  textCounter.innerText = 500 - textArea.value.length;
-}
-
-textArea.addEventListener('input', updateCounter);
-
 function getSubjects() {
   let subjectsText = 'Matérias: ';
   const subjects = [];
-  const subjectsInput = document.querySelectorAll('input[class="subject"]:checked');
+  const subjectsInput = document.getElementsByName('subjects');
+  console.log(subjectsInput);
   for (let i = 0; i < subjectsInput.length; i += 1) {
-    subjects.push(subjectsInput[i].value);
+    if (subjectsInput[i].checked) {
+      subjects.push(subjectsInput[i].value);
+    }
   }
   subjectsText += subjects.join(', ');
   return subjectsText;
